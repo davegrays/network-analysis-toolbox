@@ -6,6 +6,8 @@ function lcen = laplacian_und(CIJ)
 % this function only considers undirected binary/weighted matrices with 0 diagonal.
 % computes laplacian centrality of each node
 % outputs lcen (vector)
+%
+% -David Grayson 2014
 
 m=size(CIJ,1);
 CIJ(1:m+1:end)=0; %ensure diagonal is 0

@@ -2,6 +2,8 @@ function Q = compute_modularity(W,Ci)
 %COMPUTE_MODULARITY     computes Q from input matrix and community vector.
 %
 %   Q = compute_modularity(W,ci)
+%
+% -David Grayson 2014
 
 N=length(W);
 K=sum(W);                        %degree

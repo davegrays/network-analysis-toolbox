@@ -10,6 +10,8 @@ function Mout = matthresh_3D(M,ttype,tval)
 %(ttype='dens'), total weight fraction (ttype='twf'), or individual
 %connection weight (ttype='weight'). minimum density must also be expressed 
 %as a fraction (0-1)
+%
+% -David Grayson 2014
 
 mlen=size(M,1); %2D matrix size
 slen=size(M,3); %#subjects

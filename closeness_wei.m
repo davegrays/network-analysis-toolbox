@@ -2,6 +2,8 @@ function [ccen] = closeness_wei(CIJ)
 %CLOSENESS_CENTRALITY     closeness centrality.
 %
 %   [ccen] = closeness_wei(CIJ)
+%
+% -David Grayson 2014
 
 n=size(CIJ,1);
 ind = CIJ~=0;

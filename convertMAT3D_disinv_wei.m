@@ -8,7 +8,8 @@ function DIS_3D = convertMAT3D_disinv_wei(subject_array_3D)
 %   subject_array_3D is a 3D matrix of individual 2D weighted
 %   undirected matrices with subjects in 3rd dimension
 %   diagonal of 2D matrices should be 0
-
+%
+% -David Grayson 2014
 
 slen=size(subject_array_3D,3);
 n=size(subject_array_3D,1);

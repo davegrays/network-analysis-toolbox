@@ -18,6 +18,8 @@ function [M,Mrec,Mu,Ml] = mfpt_und(W,local)
 %
 %   Output:     Mglob,          global mfpt (scalar)
 %               Mloc,           local mfpt (vector)
+%
+% -David Grayson 2014
 
 N = size(W,1);
 oneu=triu(ones(N,N),1);

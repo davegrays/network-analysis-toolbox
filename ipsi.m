@@ -15,6 +15,8 @@ function [M_l_3D,M_r_3D,I_3D,hom_3D,contras_l_3D,contras_r_3D] = ipsi(subject_ar
 % hom is array of homotopic connection weights (length N/2)
 % contras_l and contras_r are total contralateral connectivity, including
 % homotopic, for left and right hemi nodes respectively (length N/2)
+%
+% -David Grayson 2014
 
 slen=size(subject_array_3D,3);
 

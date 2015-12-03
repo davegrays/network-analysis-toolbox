@@ -2,6 +2,9 @@ function Ci_vec = modularity_maxlike_estimator(am,iters,finetune)
 
 % get community structure using the methodology described in
 % Grayson et al 2014
+%
+% -David Grayson 2014
+
 Ci = zeros(iters,length(am));
 for i = 1:iters
     if finetune==1

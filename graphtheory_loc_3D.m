@@ -23,6 +23,8 @@ function [Gout G_METRICS] = graphtheory_loc_3D(M,Mtype,stren,clu,eff_loc,lap,clo
 %dimension
 %G_METRICS is a cell array listing the names of the metrics for
 %corresponding columns of Gout
+%
+% -David Grayson 2014
 
 if strcmp(Mtype,'wei')
     for s=1:size(M,3)

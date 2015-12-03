@@ -22,6 +22,8 @@ function [Gout G_METRICS] = graphtheory_glob_3D(M,Mtype,clu,eff_loc,ass,tran,pat
 %the size of the input matrix M's 3rd dimension.
 %G_METRICS is a cell array listing the names of the metrics for
 %corresponding columns of Gout
+%
+% -David Grayson 2014
 
 if strcmp(Mtype,'wei')
     for s=1:size(M,3)

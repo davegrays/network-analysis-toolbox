@@ -19,6 +19,7 @@ function [scores subjects groups_reordered varscores] = matrices2svdscores(m3d,g
 %
 %   outputs will be arranged in order of ascending scores
 %
+% -David Grayson 2014
 
 %% convert 2D mats stacked on 3rd dim to 1D mats stacked on 2nd dim
 mlen=size(m3d,1); %2D matrix size

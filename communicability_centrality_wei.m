@@ -10,6 +10,8 @@ function [CBC] = communicability_centrality_wei(W)
 %
 %   W must be a weighted undirected or directed adjacency matrix
 %   CBC will be a row vector of the communicability centralities of nodes
+%
+% -David Grayson 2014
 
 n = size(W,1);
 oneu=triu(ones(n,n),1);

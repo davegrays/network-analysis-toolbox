@@ -6,6 +6,8 @@ function SI_3D = convertMAT3D_SI_und(subject_array_3D)
 % subject_array_3D. converts them to search information matrices.
 % based on methods in Goni 2014 PNAS: Resting-brain functional connectivity
 % predicted by analytic measures of network communication
+%
+% -David Grayson 2014
 
 slen=size(subject_array_3D,3);
 

@@ -19,6 +19,8 @@ function [C,subg] = communicability_bin(A,local)
 %
 %   Output:     Cglob,          global communicability (scalar)
 %               Cloc,           local communicability (vector)
+%
+% -David Grayson 2014
 
 n = size(A,1);
 

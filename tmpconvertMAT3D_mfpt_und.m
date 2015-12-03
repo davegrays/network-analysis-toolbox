@@ -1,13 +1,16 @@
 function ET_3D = convertMAT3D_mfpt_und(subject_array_3D,mat3d_2)
-%CONVERTMAT3D_MFPT_UND     Convert edges of adjacency matrix to mean first passage times
+%CONVERTMAT3D_MFPT_UND     Convert edges of lesioned adjacency matrix to mean first passage times
 %
 %   ET_3D = convertMAT3D_mfpt_und(subject_array_3D);
 %
 %   Inputs:
 %   subject_array_3D is a 3D matrix of individual 2D binary/weighted
-%   undirected matrices with subjects in 3rd dimension
+%   (un)directed matrices (lesioned) with subjects in 3rd dimension
 %   diagonal of 2D matrices should be 0
-
+%
+%   mat3d_2 is the same but represents the unlesioned matrices
+%
+% -David Grayson 2015
 
 slen=size(subject_array_3D,3);
 N = size(subject_array_3D,1);
