@@ -35,7 +35,7 @@ for s=1:slen
             continue %skip to last walk length
         end
         if strcmp(af,'!')
-            G=G+(W^o)./o!;      %add to MY communicability matrix
+            G=G+(W^o)./factorial(o);      %add to MY communicability matrix
         else
             G=G+(W^o).*af^(o-1);      %add to MY communicability matrix
         end
