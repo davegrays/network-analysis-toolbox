@@ -19,7 +19,20 @@ slen=size(subject_array_3D,3);
 for s=1:slen
     W=subject_array_3D(:,:,s); %lesioned SC matrix
     X=mat3d_2(:,:,s); %unlesioned SC matrix
+    
+%     norm=sqrt(sum(X)'*sum(X));
+%     norm(:,27)=[];norm(27,:)=[]; %removing amygdala
+%     W(:,27)=[];W(27,:)=[]; %removing amygdala
+%     G=expm(W./norm);            %communicability matrix of lesioned SC matrix using rescaling factor from unlesioned SC matrix
+
     G=expm(W./sqrt(sum(X)'*sum(X)));            %communicability matrix of lesioned SC matrix using rescaling factor from unlesioned SC matrix
+    
+%     newm=zeros(40,40); %piecing the matrix back together
+%     newm(1:26,1:26)=G(1:26,1:26);
+%     newm(28:40,1:26)=G(27:39,1:26);
+%     newm(1:26,28:40)=G(1:26,27:39);
+%     newm(28:40,28:40)=G(27:39,27:39);
+%     G=newm;
 
     COM_3D(:,:,s)=G;
 end
