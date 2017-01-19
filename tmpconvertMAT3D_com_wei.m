@@ -25,7 +25,8 @@ for s=1:slen
 %     W(:,27)=[];W(27,:)=[]; %removing amygdala
 %     G=expm(W./norm);            %communicability matrix of lesioned SC matrix using rescaling factor from unlesioned SC matrix
 
-    G=expm(W./sqrt(sum(X)'*sum(X)));            %communicability matrix of lesioned SC matrix using rescaling factor from unlesioned SC matrix
+    nodeStren=(sum(X)+sum(X'))/2;
+    G=expm(W./sqrt(nodeStren'*nodeStren));            %communicability matrix of lesioned SC matrix using rescaling factor from unlesioned SC matrix
     
 %     newm=zeros(40,40); %piecing the matrix back together
 %     newm(1:26,1:26)=G(1:26,1:26);

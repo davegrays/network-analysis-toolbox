@@ -15,7 +15,8 @@ slen=size(subject_array_3D,3);
 
 for s=1:slen
     W=subject_array_3D(:,:,s);
-    G=expm(W./sqrt(sum(W)'*sum(W)));            %communicability matrix
+    nodeStren=(sum(W)+sum(W'))/2;
+    G=expm(W./sqrt(nodeStren'*nodeStren));            %communicability matrix
 
     COM_3D(:,:,s)=G;
 end

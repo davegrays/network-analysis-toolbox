@@ -26,7 +26,8 @@ function COM_3D = convertMAT3D_MYcom_wei(subject_array_3D,order,up_to_and_includ
 
 for s=1:slen
     W=subject_array_3D(:,:,s);
-    W=W./sqrt(sum(W)'*sum(W));            %normalize matrix
+    nodeStren=(sum(W)+sum(W'))/2;
+    W=W./sqrt(nodeStren'*nodeStren);            %normalize matrix
     
     if order == 0
         G=expm(W);            %communicability matrix

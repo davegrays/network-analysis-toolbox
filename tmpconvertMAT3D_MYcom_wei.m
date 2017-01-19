@@ -35,7 +35,8 @@ for s=1:slen
 %     W(:,27)=[];W(27,:)=[]; %removing amygdala
 %     G=expm(W./norm);            %communicability matrix of lesioned SC 
 
-    W=W./sqrt(sum(X)'*sum(X)); %lesioned matrix normalized against unlesioned
+    nodeStren=(sum(X)+sum(X'))/2;
+    W=W./sqrt(nodeStren'*nodeStren); %lesioned matrix normalized against unlesioned
 
     if order == 0
         G=expm(W);            %communicability matrix of lesioned SC
